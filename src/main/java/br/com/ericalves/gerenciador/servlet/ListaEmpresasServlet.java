@@ -16,7 +16,7 @@ import br.com.ericalves.gerenciador.modelo.Empresa;
 /**
  * Servlet implementation class ListaEmpresasServlet
  */
-@WebServlet("/listaEmpresas")
+//@WebServlet("/listaEmpresas")
 public class ListaEmpresasServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -35,7 +35,7 @@ public class ListaEmpresasServlet extends HttpServlet {
 		Database db = new Database();
 		List<Empresa> empresas = db.getEmpresas();
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/ListaEmpresas.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/ListaEmpresas.jsp");
 		request.setAttribute("empresas", empresas);
 		
 		rd.forward(request, response);

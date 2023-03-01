@@ -1,5 +1,5 @@
 <%@	taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:url value="/novaempresa" var="servletNovaEmpresa" />
+<c:url value="/mainServlet" var="NovaEmpresa" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,11 +7,12 @@
 <title>Cadastrar Empresa</title>
 </head>
 <body>
-	<form action="${ servletNovaEmpresa }" method="POST">
+	<form action="${ NovaEmpresa }" method="POST">
 		Nome: <input type="text" name="nome" />
 		<br>
 		CNPJ: <input type="text" name="cnpj" />
 		<br>
+		<input type="hidden" name="action" value="NovaEmpresa">
 		<button>Cadastrar</button>
 	</form>
 </body>

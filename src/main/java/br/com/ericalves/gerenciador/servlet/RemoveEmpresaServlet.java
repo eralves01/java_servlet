@@ -13,7 +13,7 @@ import br.com.ericalves.gerenciador.modelo.Database;
 /**
  * Servlet implementation class RemoveEmpresa
  */
-@WebServlet("/removeEmpresa")
+//@WebServlet("/removeEmpresa")
 public class RemoveEmpresaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

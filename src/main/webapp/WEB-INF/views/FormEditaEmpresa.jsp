@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@	taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@	taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<c:url value="/editarEmpresa" var="servletEditaEmpresa" />
+<c:url value="/mainServlet" var="editaEmpresa" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +11,10 @@
 </head>
 <body>
 	<c:if test="${ not empty empresa }">
-		<form action="${ servletEditaEmpresa }" method="POST">
+		<form action="${ editaEmpresa }" method="POST">
 			<h1>Editar Empresa:</h1>
 			<h2><input type="hidden" name="id" value="${ empresa.id }"></h2>
+			<h2><input type="hidden" name="action" value="EditaEmpresa"></h2>
 			<h2>Nome: <input type="text" name="nome" value="${ empresa.nome }" /></h2>
 			<h2>CNPJ: <input type="text" name="cnpj" value="${ empresa.cnpj }" /></h2>
 			<button>Enviar</button>

@@ -13,7 +13,11 @@
 	<ul>
 		<c:forEach items="${ empresas }" var="empresa">
 			<li>Nome: ${ empresa.nome } - CNPJ: ${ empresa.cnpj }</li>
-			<a href="/gerenciador/removeEmpresa?id=${ empresa.id }">Remover</a> | <a href="/gerenciador/mostraEmpresa?id=${ empresa.id }">Editar</a>
+			<a 
+				href="/gerenciador/mainServlet?action=RemoveEmpresa&id=${ empresa.id }">Remover
+			</a> | <a 
+				href="/gerenciador/mainServlet?action=FormEditaEmpresa&id=${ empresa.id }">Editar
+			</a>
 		</c:forEach>
 	</ul>
 </body>
